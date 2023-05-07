@@ -1,0 +1,19 @@
+.ant-layout-header{
+  background-color: #001529 !important;
+  margin-bottom:16px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  nav{
+    padding-left: 16px;
+  }
+}
+.content{
+  margin: 0 16px;
+  height: calc(100vh - 120px);
+  background-color: #fff;
+}
+.ant-layout-footer{
+  padding: 16px 50px;
+  text-align: center;
+}
