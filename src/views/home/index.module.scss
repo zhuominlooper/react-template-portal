@@ -1,7 +1,7 @@
 .ant-layout-header{
   background-color: #001529 !important;
   margin-bottom:16px;
-  height: 40px;
+  height: 64px;
   display: flex;
   align-items: center;
   nav{
@@ -10,7 +10,7 @@
 }
 .content{
   margin: 0 16px;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 140px);
   background-color: #fff;
 }
 .ant-layout-footer{

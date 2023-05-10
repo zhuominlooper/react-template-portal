@@ -1,8 +1,9 @@
 import { useState } from "react";
-import style from './index.module.scss'
-import { Breadcrumb, Layout, Menu, theme } from "antd";
-import menuItems from "./config";
-const { Content, Footer,Header, Sider } = Layout;
+import style from "./index.module.scss";
+import { Layout, theme } from "antd";
+import {Outlet } from "react-router-dom";
+import SiderMenu from '@/conponents/SiderMenu'
+const { Content, Footer, Header, Sider } = Layout;
 export default function Home() {
   const [collapsed, setCollapsed] = useState(false);
   const fullYear = new Date().getFullYear();
@@ -24,29 +25,16 @@ export default function Home() {
             background: "rgba(255, 255, 255, 0.2)",
           }}
         />
-        <Menu
-          theme="dark"
-          defaultSelectedKeys={["1"]}
-          mode="inline"
-          items={menuItems}
-        />
+       <SiderMenu></SiderMenu>
       </Sider>
-
       <Layout className="site-layout">
         <Header
           className={style["ant-layout-header"]}
           style={{ padding: 0, background: colorBgContainer }}
         ></Header>
         <Content className={style["content"]}>
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-            }}
-          >
-            Bill is a cat.
-          </div>
+          {/* 路由出口 */}
+          <Outlet></Outlet>
         </Content>
         <Footer className={style["ant-layout-footer"]}>
           React Template Protal Design ©{fullYear} Created By Looper.Zhuo
